@@ -1,4 +1,11 @@
+
+import 'package:currency_converter/pages/class_currency_converter_material_page.dart';
 import 'package:flutter/material.dart';
+
+
+// there is two type of importing in flutter
+// 1. package importing
+// 2. Relative importing
 
 void main() {
   runApp(
@@ -20,11 +27,7 @@ class MyAPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-         body: Center(
-            child: Text("Tauhid Hasan"),
-         )
-      )
+      home: CurrencyConverterMaterialPage()
     );
   }
 }
