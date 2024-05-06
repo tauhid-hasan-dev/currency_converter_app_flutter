@@ -27,19 +27,23 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            TextField(
-              style: TextStyle(color: Colors.white),
-              decoration: InputDecoration(
-                hintText: "Please enter an amount to convert to USD",
-                hintStyle: TextStyle(color: Color.fromARGB(255, 151, 151, 151)),
-                prefixIcon: Icon(
-                  Icons.monetization_on_outlined,
+            Container(
+              padding: EdgeInsets.all(8.0),
+              child: TextField(
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  hintText: "Please enter an amount to convert to USD",
+                  hintStyle:
+                      TextStyle(color: Color.fromARGB(255, 151, 151, 151)),
+                  prefixIcon: Icon(
+                    Icons.monetization_on_outlined,
+                  ),
+                  prefixIconColor: Color.fromARGB(255, 151, 151, 151),
+                  filled: true,
+                  fillColor: Color.fromARGB(255, 63, 62, 62),
+                  focusedBorder: border,
+                  enabledBorder: border,
                 ),
-                prefixIconColor: Color.fromARGB(255, 151, 151, 151),
-                filled: true,
-                fillColor: Color.fromARGB(255, 63, 62, 62),
-                focusedBorder: border,
-                enabledBorder: border,
               ),
             ),
           ],
