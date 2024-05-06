@@ -20,7 +20,10 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 3, 116, 107),
         elevation: 0,
-        title: const Text("Currency Converter"),
+        title: const Text(
+          "Currency Converter",
+          style: TextStyle(color: Colors.white),
+        ),
         centerTitle: true,
       ),
       body: Center(
