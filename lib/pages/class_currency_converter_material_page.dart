@@ -8,7 +8,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Color.fromARGB(255, 160, 160, 160),
-        width: 5.0,
+        width: 1.0,
         style: BorderStyle.solid,
         strokeAlign: BorderSide.strokeAlignCenter,
       ),
@@ -27,7 +27,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            Container(
+            Padding(
               padding: EdgeInsets.all(8.0),
               child: TextField(
                 style: TextStyle(color: Colors.white),
