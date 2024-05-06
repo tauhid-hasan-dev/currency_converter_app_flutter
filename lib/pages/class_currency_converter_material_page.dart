@@ -55,18 +55,15 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                     print('Button clicked');
                   }
                 },
-                style: ButtonStyle(
-                  elevation: const MaterialStatePropertyAll(10),
-                  backgroundColor: const MaterialStatePropertyAll(
-                      Color.fromARGB(255, 3, 137, 126)),
-                  foregroundColor: const MaterialStatePropertyAll(Colors.white),
-                  shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
+                // Instead of MaterialStatePropertyAll() we can use TextButton.styleFrom()
+                style: TextButton.styleFrom(
+                  elevation: (10),
+                  backgroundColor: (const Color.fromARGB(255, 108, 137, 3)),
+                  foregroundColor: (Colors.white),
+                  shape: (RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   )),
-                  minimumSize: const MaterialStatePropertyAll(
-                    Size(double.infinity, 50),
-                  ),
+                  minimumSize: (const Size(double.infinity, 50)),
                 ),
                 child: const Text(
                   'Click me',
