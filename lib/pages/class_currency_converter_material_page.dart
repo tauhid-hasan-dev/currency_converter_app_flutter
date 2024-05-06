@@ -14,22 +14,22 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
       ),
       borderRadius: BorderRadius.all(Radius.circular(8)),
     );
-    return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 3, 75, 69),
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 3, 75, 69),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               '0',
               style: TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
+            Container(
+              padding: const EdgeInsets.all(8.0),
+              child: const TextField(
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   hintText: "Please enter an amount to convert to USD",
