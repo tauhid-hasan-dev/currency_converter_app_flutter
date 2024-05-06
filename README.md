@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+// https://www.tcmb.gov.tr/kurlar/today.xml
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
