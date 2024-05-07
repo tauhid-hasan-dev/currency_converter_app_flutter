@@ -25,9 +25,8 @@ class _CurrencyConverterPage extends State<CurrencyConverterPage> {
   @override
   Widget build(BuildContext context) {
     void convert() {
-      print(double.parse(textEditingController.text) * 80);
       result = double.parse(textEditingController.text) * 80;
-      setState(() {});
+      setState(() {}); // setState triggers a rebuild using the build function
     }
 
     @override
@@ -106,7 +105,7 @@ class _CurrencyConverterPage extends State<CurrencyConverterPage> {
                   minimumSize: (const Size(double.infinity, 50)),
                 ),
                 child: const Text(
-                  'Click me',
+                  'Convert',
                 ),
               ),
             )
