@@ -1,11 +1,17 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+//1.  Create a variable that stores the converted currency value.
+//2.  Create a function that multiplies the value given by the textfield
+//3.  Store the value in the variable that we created
+//4.  Display the variable.
 
 class CurrencyConverterMaterialPage extends StatelessWidget {
   const CurrencyConverterMaterialPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController textEditingController = TextEditingController();
+
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Color.fromARGB(255, 160, 160, 160),
@@ -39,9 +45,10 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.all(8.0),
-              child: const TextField(
-                style: TextStyle(color: Colors.white),
-                decoration: InputDecoration(
+              child: TextField(
+                controller: textEditingController,
+                style: const TextStyle(color: Colors.white),
+                decoration: const InputDecoration(
                   hintText: "Please enter an amount to convert to USD",
                   hintStyle:
                       TextStyle(color: Color.fromARGB(255, 151, 151, 151)),
@@ -54,7 +61,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   focusedBorder: border,
                   enabledBorder: border,
                 ),
-                keyboardType: TextInputType.numberWithOptions(
+                keyboardType: const TextInputType.numberWithOptions(
                   decimal: true,
                 ),
               ),
@@ -63,9 +70,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  if (kDebugMode) {
-                    print('Button clicked');
-                  }
+                  print(textEditingController);
                 },
                 // Instead of MaterialStatePropertyAll() we can use TextButton.styleFrom()
                 style: TextButton.styleFrom(
