@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 //1.  Create a variable that stores the converted currency value.
@@ -10,6 +11,10 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (kDebugMode) {
+      print("rebuilt");
+    }
+    double result = 0;
     final TextEditingController textEditingController = TextEditingController();
 
     const border = OutlineInputBorder(
@@ -36,9 +41,9 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              '0',
-              style: TextStyle(
+            Text(
+              result.toString(),
+              style: const TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
@@ -70,7 +75,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
                 onPressed: () {
-                  print(textEditingController);
+                  result = double.parse(textEditingController.text) * 80;
                 },
                 // Instead of MaterialStatePropertyAll() we can use TextButton.styleFrom()
                 style: TextButton.styleFrom(
