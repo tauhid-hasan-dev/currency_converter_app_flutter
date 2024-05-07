@@ -12,7 +12,7 @@ void main() {
 
 // Types of widgets
 // 1. StatelessWidget (states are immutable)
-// 2. StatefulWidget (states are mutable)
+// 2. StatefulWidget (states are mutable inside the State object of the stateful widgets)
 // 3. InheritedWidget
 
 // We have two types of design
@@ -24,6 +24,6 @@ class MyAPP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: CurrencyConverterMaterialPage());
+    return const MaterialApp(home: CurrencyConverterPage());
   }
 }

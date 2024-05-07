@@ -1,21 +1,40 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+// we can not create mutable variable inside a statefulWidget because it has const cosntructor.
+// but we can create mutable variable inside the class which is extended from the State() class.
 
 //1.  Create a variable that stores the converted currency value.
 //2.  Create a function that multiplies the value given by the textfield
 //3.  Store the value in the variable that we created
 //4.  Display the variable.
 
-class CurrencyConverterMaterialPage extends StatelessWidget {
-  const CurrencyConverterMaterialPage({super.key});
+// Note: Build function should be less expensive as much as possible
+// Mutable variable should not be used inside the build function
+
+class CurrencyConverterPage extends StatefulWidget {
+  const CurrencyConverterPage({super.key});
+
+  @override
+  State<CurrencyConverterPage> createState() => _CurrencyConverterPage();
+}
+
+class _CurrencyConverterPage extends State<CurrencyConverterPage> {
+  double result = 0;
+  final TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    if (kDebugMode) {
-      print("rebuilt");
+    void convert() {
+      print(double.parse(textEditingController.text) * 80);
+      result = double.parse(textEditingController.text) * 80;
+      setState(() {});
     }
-    double result = 0;
-    final TextEditingController textEditingController = TextEditingController();
+
+    @override
+    void dispose() {
+      textEditingController.dispose();
+      super.dispose();
+    }
 
     const border = OutlineInputBorder(
       borderSide: BorderSide(
@@ -26,6 +45,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
       ),
       borderRadius: BorderRadius.all(Radius.circular(8)),
     );
+
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 3, 75, 69),
       appBar: AppBar(
@@ -74,9 +94,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                onPressed: () {
-                  result = double.parse(textEditingController.text) * 80;
-                },
+                onPressed: convert,
                 // Instead of MaterialStatePropertyAll() we can use TextButton.styleFrom()
                 style: TextButton.styleFrom(
                   elevation: (10),
