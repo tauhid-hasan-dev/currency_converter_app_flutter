@@ -15,7 +15,6 @@ import 'package:xml/xml.dart';
       4- Perform any custom initialization such as data fetching or setting up listeners.
       5- Widget Building (build() method is called to describe the widget in terms of other lower-level widgets)
       6- Widget Rebuilding (if setState() is called, build() method is called again) 
-    
 */
 
 //? Project Algorithm
