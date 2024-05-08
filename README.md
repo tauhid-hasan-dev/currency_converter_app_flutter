@@ -1,5 +1,8 @@
 # currency_converter
 
+Read: https://medium.com/@hadiyaaamir222/lifecycle-of-a-stateful-widget-aece2d56c946
+Watch: https://www.youtube.com/watch?v=_gIbneld-bw&ab_channel=FlutterCommunity
+
 A new Flutter project.
 
 // https://www.tcmb.gov.tr/kurlar/today.xml
