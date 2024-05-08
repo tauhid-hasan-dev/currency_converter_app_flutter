@@ -68,6 +68,19 @@ class _CurrencyConverterPage extends State<CurrencyConverterPage> {
     setState(() {});
   }
 
+  /*  
+      The dispose() method in Flutter is another lifecycle method, complementary to initState(). 
+      It is called when a State object is removed from the tree permanently, which marks the end of the lifecycle of the stateful widget. 
+      The dispose() method is typically used for cleaning up resources to prevent memory leaks and ensuring that any background processes are terminated when they are no longer needed. 
+      Here's what each part of your provided dispose() method does:
+  */
+
+  @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
