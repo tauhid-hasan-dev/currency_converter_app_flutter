@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-
 // we can not create mutable variable inside a statefulWidget because it has const cosntructor.
 // but we can create mutable variable inside the class which is extended from the State() class.
 
-//1.  Create a variable that stores the converted currency value.
-//2.  Create a function that multiplies the value given by the textfield
-//3.  Store the value in the variable that we created
-//4.  Display the variable.
+// 1.  Create a variable that stores the converted currency value.
+// 2.  Create a function that multiplies the value given by the textfield
+// 3.  Store the value in the variable that we created
+// 4.  Display the variable.
 
 // Note: Build function should be less expensive as much as possible
 // Mutable variable should not be used inside the build function
