@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:xml/xml.dart';
 
+//? Notes:
 // we can not create mutable variable inside a statefulWidget because it has const cosntructor.
 // but we can create mutable variable inside the class which is extended from the State() class.
 // Note: Build function should be less expensive as much as possible
@@ -67,6 +68,7 @@ class _CurrencyConverterPage extends State<CurrencyConverterPage> {
     setState(() {});
   }
 
+  //? dispose () method:
   /*  
       The dispose() method in Flutter is another lifecycle method, complementary to initState(). 
       It is called when a State object is removed from the tree permanently, which marks the end of the lifecycle of the stateful widget. 
